@@ -12,12 +12,12 @@ import torch
 from mujoco_env import make_mujoco_env
 from torch.utils.tensorboard import SummaryWriter
 
-from tianshou.data import Collector, ReplayBuffer, VectorReplayBuffer
-from tianshou.policy import SACPolicy
-from tianshou.trainer import offpolicy_trainer
-from tianshou.utils import TensorboardLogger, WandbLogger
-from tianshou.utils.net.common import Net
-from tianshou.utils.net.continuous import ActorProb, Critic
+from agents.data import Collector, ReplayBuffer, VectorReplayBuffer
+from agents.policy import SACPolicy
+from trainers import offpolicy_trainer
+from utils import TensorboardLogger, WandbLogger
+from utils.net.common import Net
+from utils.net.continuous import ActorProb, Critic
 
 
 def get_args():
